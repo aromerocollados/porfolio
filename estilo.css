@@ -284,6 +284,15 @@ h2 {
 }
 
 /* HABILIDADES*/
+@keyframes crecer {
+    from {
+        width: 0;
+    }
+    to {
+        width: var(--width);
+    }
+}
+
 .skills {
     background-color: #252A2E;
     color: #fff;
@@ -335,6 +344,12 @@ h2 {
     align-items: center;
     justify-content: flex-end; 
     position: relative;
+    width: 0; /* Empieza en 0 */
+    --width: 0; /* Variable para el ancho */
+}
+
+.skills .skill .progreso.animated {
+    animation: crecer 1s forwards; /* Duración y dirección de la animación */
 }
 
 .skills .skill .barra-skill span {
@@ -354,6 +369,7 @@ h2 {
     color: #fff; 
     padding-right: 5px; 
 }
+
 
 /* CURRICULUM*/
 .curriculum {
