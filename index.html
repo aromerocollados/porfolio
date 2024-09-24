@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Portfolio de Alejandro Romero</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <!-- MENU ENCABEZADO -->
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a href="#">Alejandro Romero</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
+                    <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
+                    <li><a href="#skills" onclick="seleccionar()">HABILIDADES</a></li>
+                    <li><a href="#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
+                    <li><a href="#portfolio" onclick="seleccionar()">PROYECTOS</a></li>
+                    <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+
+    <!-- SECCION INICIO -->
+    <section id="inicio" class="inicio">
+        <div class="contenido-banner">
+            <div class="contenedor-img">
+                <img src="img/me.png" alt="">
+            </div>
+            <h1>ALEJANDRO ROMERO</h1>
+            <h2>Desarrollador Software</h2>
+            <div class="redes">
+                <a href="https://www.linkedin.com/in/alejandro-romero-collados-73667923b/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/aromerocollados" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/aromero03_/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://stackoverflow.com/users/27436396/alejandro-romero" target="_blank"><i class="fa-brands fa-stack-overflow"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION SOBRE MI -->
+    <section id="sobremi" class="sobremi">
+        <div class="contenido-seccion">
+            <h2>Sobre Mí</h2>
+            <p><span>Hola, mi nombre es Alejandro Romero Collados.</span> Soy un recién graduado en Desarrollo de Aplicaciones Multiplataforma. Estoy en constante búsqueda de oportunidades que me permitan crecer tanto a nivel personal como profesional y tengo un gran interés en aprender nuevas tecnologías y lenguajes.</p>
+
+            <div class="fila">
+                <!-- datos personales -->
+                <div class="col">
+                    <h3>Datos Personales</h3>
+                    <ul>
+                        <li>
+                            <strong>Cumpleaños</strong>
+                            06/09/2003
+                        </li>
+                        <li>
+                            <strong>Teléfono</strong>
+                            625-045-904
+                        </li>
+                        <li>
+                            <strong>Email</strong>
+                            aromerocollados03@gmail.com
+                        </li>
+                        <li>
+                            <strong>GitHub</strong>
+                            https://github.com/aromerocollados
+                        </li>
+                        <li>
+                            <strong>Lugar</strong>
+                            Elda, Alicante
+                        </li>
+                        <li>
+                            <strong>Cargo</strong>
+                            <span>SIN EMPLEO</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- intereses -->
+                <div class="col">
+                    <h3>Aficiones</h3>
+                    <div class="contenedor-intereses">
+                        <div class="interes">
+                            <i class="fa-solid fa-headphones"></i>
+                            <span>MUSICA</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-gamepad"></i>
+                            <span>JUEGOS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-users"></i>
+                            <span>FAMILIA</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-laptop-code"></i>
+                            <span>PROGRAMAR</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-flag-checkered"></i>
+                            <span>CARRERAS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-tv"></i>
+                            <span>SERIES</span>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+            <div class="download-btn-container">
+                <a href="img/CV Alejandro Romero.pdf" download="CV_Alejandro_Romero">
+                    Descargar CV <i class="fa-solid fa-download"></i>
+                    <span class="overlay"></span>
+                </a>
+            </div>               
+        </div>
+    </section>
+
+    <!-- SECCION SKILLS -->
+    <section class="skills" id="skills">
+        <div class="contenido-seccion">
+            <h2>Habilidades</h2>
+            <div class="fila">
+                <div class="col">
+                    <div class="skill">
+                        <span>Pascal</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>75%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>HTML & CSS & Javascript</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>60%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Java</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>70%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Bases de Datos</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>C#</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>65%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="skill">
+                        <span>Kotlin</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>65%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Git</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>70%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Spring Boot</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>55%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Python</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>60%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Visual Studio</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>90%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION CURRICULUM -->
+    <section id="curriculum" class="curriculum">
+        <div class="contenido-seccion">
+            <h2>Currículum</h2>
+            <div class="fila">
+                <div class="col izquierda">
+                    <h3>Educación</h3>
+                    <div class="item izq">
+                        <h4>Educación Secundaria Obligatoria</h4>
+                        <span class="casa">Colegio Sagrada Familia Elda</span>
+                        <span class="fecha">2015 - 2019</span>
+                        <p>Durante mi paso por la ESO, desarrollé habilidades sociales que no tenía previamente. Al adaptarme a un nuevo entorno y conocer a gente diferente, aprendí a relacionarme mejor y a comunicarme de forma más efectiva. Esta etapa fue realmente bonita; viví momentos memorables y forjé amistades que me ayudaron a crecer. A través de diversas actividades y experiencias compartidas, no solo adquirí conocimientos académicos, sino que también construí una base sólida para mi desarrollo personal.</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Bachillerato Tecnológico</h4>
+                        <span class="casa">Colegio Sagrada Familia Elda</span>
+                        <span class="fecha">2019 - 2021</span>
+                        <p>En el bachillerato, continué en el mismo colegio, decantándome por el bachillerato tecnológico. Durante esta etapa, tomé decisiones importantes y, a veces, difíciles, como no ir a la universidad. En lugar de eso, decidí centrarme específicamente en un ciclo que me ayudó a desarrollar lo que realmente me apasionaba, la programación. Esta elección me permitió profundizar en mis conocimientos y habilidades en un área que me interesaba, sentando las bases para mi futuro profesional.</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>CFGS Desarrollo de Aplicaciones Multiplataforma</h4>
+                        <span class="casa">IES Poeta Paco Mollá Petrel</span>
+                        <span class="fecha">2022 - 2024</span>
+                        <p>Durante el ciclo de grado superior en Desarrollo de Aplicaciones Multiplataforma, tuve la oportunidad de aprender diversas asignaturas que me brindaron una sólida formación técnica. Estudié lenguajes de programación como Java y C#, así como desarrollo de aplicaciones móviles y web. También aprendí sobre bases de datos, diseño de interfaces y metodologías ágiles, que son esenciales en este mundo. Además, este ciclo me permitió formar amistades con compañeros que comparten mi pasión por la programación. Juntos, hemos colaborado en proyectos y nos hemos apoyado mutuamente en el aprendizaje de nuevas tecnologías. Sin duda, este período ha sido fundamental en mi desarrollo profesional y personal.</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col derecha">
+                    <h3>Experiencia de trabajo</h3>
+                    <div class="item der">
+                        <h4>Programador Junior</h4>
+                        <span class="casa">CP Farma S.L</span>
+                        <span class="fecha">4 meses</span>
+                        <p>
+                            Durante mis prácticas en CPFarma, una de mis principales responsabilidades fue la solución de incidencias en la aplicación que la empresa utilizaba para gestionar procesos de ciertos hospitales. Esto me permitió poner en práctica mis habilidades de análisis y resolución de problemas, ya que tuve que identificar errores, buscar sus causas y proponer soluciones efectivas para garantizar el correcto funcionamiento del sistema.</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <div class="contenido-seccion">
+            <h2>PROYECTOS</h2>
+            <div class="galeria">
+            <!--<div class="proyecto">
+                    <img src="img/p1.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Diseño Creativo</h3>
+                        <p>Fotografía</p>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="contacto">
+        <div class="contenido-seccion">
+            <h2>CONTACTO</h2>
+            <div class="fila">
+                <!-- Formulario -->
+                <div class="col">
+                    <input type="text" placeholder="Nombre">
+                    <input type="text" placeholder="Teléfono">
+                    <input type="text" placeholder="Correo">
+                    <input type="text" placeholder="Asunto">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                    <button>
+                        Enviar Mensaje <i class="fa-solid fa-paper-plane"></i>
+                        <span class="overlay"></span>
+                    </button>
+                </div>
+                <div class="col">
+                    <img src="img/ed87091677cfbc14672a4f87a0e4e416.gif" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <a href="#inicio" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
