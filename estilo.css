@@ -1,16 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
 *{
     box-sizing: border-box;
-    font-family: 'Work Sans';
+    font-family: 'sans-serif';
     margin: 0;
     padding: 0;
 }
+
 html{
-    /* me permite deslizar cuando hago clic en los links del menu */
     scroll-behavior: smooth;
 }
+
 /* MENU */
-.contenedor-header{
+.contenedor-header {
     background: #1e2326;
     position: fixed;
     width: 100%;
@@ -18,104 +19,146 @@ html{
     left: 0;
     z-index: 99;
 }
-.contenedor-header header{
-    max-width: 1100px;
+
+.contenedor-header header {
+    max-width: 1500px; 
     margin: auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
     align-items: center;
     padding: 15px 20px;
 }
-.contenedor-header header .logo a{
-    font-family: 'Righteous';
-    font-size: 36px;
-    color: #658af0;
-    text-decoration: none;
+
+nav {
+    flex-grow: 1; 
+    text-align: center; 
 }
-.contenedor-header header ul{
+
+.contenedor-header header ul {
     display: flex;
+    justify-content: center; 
     list-style: none;
+    padding: 0; 
 }
-.contenedor-header header nav ul li a{
+
+.contenedor-header header nav ul li {
+    position: relative; 
+}
+
+.contenedor-header header nav ul li a {
     text-align: none;
     color: #fff;
-    margin: 0 15px;
-    padding: 3px;
-    transition: .5s;
+    margin: 0 15px; 
+    padding: 8px 12px; 
+    border-radius: 5px; 
+    transition: background-color 1s, color 0.5s, transform 0.3s; 
     text-decoration: none;
 }
-.contenedor-header header nav ul li a:hover{
-    color: #658af0;
+
+.contenedor-header header nav ul li a:hover {
+    background-color: rgba(101, 138, 240, 0.2);
+    color: #658af0; 
+    transform: translateY(-2px); 
 }
-.nav-responsive{
+
+.nav-responsive {
     background-color: #658af0;
-    color:#fff;
+    color: #fff;
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
     display: none;
 }
 
-.inicio{
-    background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)),
-    url(img/fondo.jpg);
+.nav-responsive:hover {
+    background-color: #4a6f9a; 
+}
+
+/* INICIO*/
+.inicio {
+    background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)), url(img/fondo.jpg);
     background-size: cover;
     height: 100vh;
     color: #fff;
     display: flex;
     align-items: center;
+    justify-content: center; 
 }
-.inicio .contenido-banner{
-    padding: 20px;
-    background-color: #1e2326;
-    max-width: 350px;
-    margin: auto;
+
+.contenido-banner {
     text-align: center;
-    border-radius: 40px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
+    margin-right: 20px;
 }
-.inicio .contenido-banner img{
-    margin-top: 40px;
-    border: 10px solid #658af0;
-    display: block;
-    width: 80%;
-    margin: auto;
-    border-radius: 100%;
+
+h1 {
+    font-size: 2.5em;
+    margin: 15px 0;
+    color: #333;
 }
-.inicio .contenido-banner h1{
+
+h2 {
+    font-size: 1.5em;
+    color: #777;
+}
+
+.redes {
     margin-top: 20px;
-    font-size: 30px;
-    font-family: 'Righteous';
 }
-.inicio .contenido-banner h2{
-    margin-top: 5px;
-    font-size: 20px;
-    font-weight: normal;
-}
-.inicio .contenido-banner .redes a{
-    color: #fff;
-    display: inline-block;
+
+.redes a {
     text-decoration: none;
-    border: 1px solid #fff;
-    border-radius: 100%;
-    width: 42px;
-    height: 42px;
-    line-height: 42px;
-    margin: 40px 5px;
-    font-size: 20px;
-    transition: .3s;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    margin: 5px;
+    display: inline-block;
+    font-size: 1.5em;
+    transition: background-color 0.3s;
 }
-.inicio .contenido-banner .redes a:hover{
-    background-color: #658af0;
+
+.redes a:hover {
+    opacity: 0.8;
 }
+
+.redes a .fa-linkedin-in {
+    background-color: #0077b5;
+    padding: 10px;
+}
+
+.redes a .fa-github {
+    background-color: #333;
+    padding: 10px;
+}
+
+.redes a .fa-instagram {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    padding: 10px;
+}
+
+.redes a .fa-stack-overflow {
+    background-color: #f48024;
+    padding: 10px;
+}
+
+
+/*SOBRE MI*/
 .sobremi{
     background-color: #1e2326;
     color: #fff;
     padding: 50px 20px;
 }
+
 .sobremi .contenido-seccion{
     max-width: 1100px;
     margin: auto;
 }
+
 .sobremi h2{
     font-size: 48px;
     font-family: 'Righteous';
@@ -123,33 +166,45 @@ html{
     padding: 20px 0;
 
 }
+
 .sobremi .contenido-seccion p{
     font: 18px;
     line-height: 22px;
     margin-bottom: 20px;
 }
+
 .sobremi .contenido-seccion p span{
     color: #658af0;
     font-weight: bold;
 }
+
 .sobremi .fila{
     display: flex;
 }
+
 .sobremi .fila .col
 {
     width: 50%;
 }
+
 .sobremi .fila .col h3{
     font-size: 28px;
     font-family: 'Righteous';
     margin-bottom: 25px;
 }
+
 .sobremi .fila .col ul{
     list-style: none;
 }
+
 .sobremi .fila .col ul li{
     margin: 12px 0;
 }
+
+.sobremi .fila .col ul li a{
+    color: white;
+}
+
 .sobremi .fila .col ul li strong{
     display: inline-block;
     color: #658af0;
@@ -161,10 +216,12 @@ html{
     font-weight: bold;
     border-radius: 5px;
 }
+
 .sobremi .fila .col .contenedor-intereses{
     display: flex;
     flex-wrap: wrap;
 }
+
 .sobremi .fila .col .contenedor-intereses .interes{
     width: 100px;
     height: 100px;
@@ -176,9 +233,12 @@ html{
     align-items: center;
     justify-content: center;
     transition: .3s;
-}.sobremi .fila .col .contenedor-intereses .interes:hover{
+}
+
+.sobremi .fila .col .contenedor-intereses .interes:hover{
     background-color: #658af0;
 }
+
 .sobremi .fila .col .contenedor-intereses .interes i{
     font-size: 30px;
     margin-bottom: 10px;
@@ -189,7 +249,6 @@ html{
     margin-top: 20px;  
 }
 
-/* Estilo del botón de descarga */
 .sobremi button, .sobremi a[download] {
     cursor: pointer;
     background-color: transparent;
@@ -205,7 +264,6 @@ html{
     box-sizing: border-box;
 }
 
-/* Efecto hover con overlay */
 .sobremi button .overlay, .sobremi a[download] .overlay {
     position: absolute;
     top: 0;
@@ -221,225 +279,162 @@ html{
     width: 100%;
 }
 
-/* Estilo del icono */
 .sobremi a[download] i {
     margin-left: 10px;
 }
 
-.skills{
+/* HABILIDADES*/
+.skills {
     background-color: #252A2E;
     color: #fff;
     padding: 50px 20px;
 }
-.skills .contenido-seccion{
+
+.skills .contenido-seccion {
     max-width: 1100px;
     margin: auto;
 }
-.skills h2{
+
+.skills h2 {
     font-size: 48px;
     font-family: 'Righteous';
     text-align: center;
     padding: 20px 0;
-
 }
-.skills .fila{
+
+.skills .fila {
     display: flex;
 }
-.skills .fila .col{
+
+.skills .fila .col {
     width: 50%;
     padding: 0 20px;
 }
 
-.skills .skill > span{
+.skills .skill > span {
     font-weight: bold;
     display: block;
     margin-bottom: 10px;
 }
-.skills .skill .barra-skill{
+
+.skills .skill .barra-skill {
     height: 8px;
     width: 80%;
     background-color: #131517;
-    position: relative;
+    border-radius: 5px;
     margin-bottom: 30px;
+    position: relative;
 }
-.skills .skill .progreso{
+
+.skills .skill .progreso {
     background-color: #658af0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 8px;
+    height: 100%;
+    border-radius: 5px;
+    transition: width 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; 
+    position: relative;
 }
-.skills .skill .barra-skill span{
+
+.skills .skill .barra-skill span {
     position: absolute;
-    height: 40px;
+    height: 25px;
     width: 40px;
     background-color: #658af0;
-    border-radius: 50px;
-    line-height: 40px;
+    border-radius: 5px;
+    line-height: 25px;
     text-align: center;
     top: -17px;
     right: -15px;
     font-size: 14px;
 }
 
-.skills .skill .pascal{
-    width: 0%;
-    animation: 2s pascal forwards;
-}
-@keyframes pascal {
-    0%{width: 0%;}
-    100%{width: 75%;}
+.skills .skill .progreso span {
+    color: #fff; 
+    padding-right: 5px; 
 }
 
-.skills .skill .htmlcssjs{
-    width: 0%;
-    animation: 2s htmlcssjs forwards;
-}
-@keyframes htmlcssjs {
-    0%{width: 0%;}
-    100%{width: 60%;}
-}
-
-.skills .skill .java{
-    width: 0%;
-    animation: 2s java forwards;
-}
-@keyframes java {
-    0%{width: 0%;}
-    100%{width: 70%;}
-}
-
-.skills .skill .bbdd{
-    width: 0%;
-    animation: 2s bbdd forwards;
-}
-@keyframes bbdd {
-    0%{width: 0%;}
-    100%{width: 80%;}
-}
-
-.skills .skill .cs{
-    width: 0%;
-    animation: 2s cs forwards;
-}
-@keyframes cs {
-    0%{width: 0%;}
-    100%{width: 65%;}
-}
-
-.skills .skill .kotlin{
-    width: 0%;
-    animation: 2s kotlin forwards;
-}
-@keyframes kotlin {
-    0%{width: 0%;}
-    100%{width: 65%;}
-}
-
-.skills .skill .git{
-    width: 0%;
-    animation: 2s git forwards;
-}
-@keyframes git {
-    0%{width: 0%;}
-    100%{width: 70%;}
-}
-
-.skills .skill .spring{
-    width: 0%;
-    animation: 2s spring forwards;
-}
-@keyframes spring {
-    0%{width: 0%;}
-    100%{width: 55%;}
-}
-
-.skills .skill .python{
-    width: 0%;
-    animation: 2s python forwards;
-}
-@keyframes python {
-    0%{width: 0%;}
-    100%{width: 60%;}
-}
-
-.skills .skill .vscode{
-    width: 0%;
-    animation: 2s vscode forwards;
-}
-@keyframes vscode {
-    0%{width: 0%;}
-    100%{width: 90%;}
-}
-
-.curriculum{
+/* CURRICULUM*/
+.curriculum {
     background-color: #1e2326;
     color: #fff;
     padding: 50px 20px;
 }
-.curriculum .contenido-seccion{
+
+.curriculum .contenido-seccion {
     max-width: 1100px;
     margin: auto;
 }
-.curriculum h2{
+
+.curriculum h2 {
     font-size: 48px;
     font-family: 'Righteous';
     text-align: center;
     padding: 20px 0;
-
 }
-.curriculum .fila{
+
+.curriculum .fila {
     display: flex;
     justify-content: space-between;
 }
-.curriculum .fila .col{
+
+.curriculum .fila .col {
     width: 49%;
     padding: 0 20px;
 }
-.curriculum .fila .col h3{
+
+.curriculum .fila .col h3 {
     font-size: 28px;
     font-family: 'Righteous';
     margin-bottom: 25px;
 }
-.curriculum .fila .izquierda{
+
+.curriculum .fila .izquierda {
     border-right: 2px solid #252A2E;
 }
-.curriculum .fila .derecha{
+
+.curriculum .fila .derecha {
     border-left: 2px solid #252A2E;
 }
-.curriculum .fila .item{
+
+.curriculum .fila .item {
     padding: 25px;
     margin-bottom: 30px;
     background-color: #252A2E;
     position: relative;
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+    transition: transform 0.3s; 
 }
-.curriculum .fila .item h4{
+
+.curriculum .fila .item:hover {
+    transform: translateY(-5px); 
+}
+
+.curriculum .fila .item h4 {
     font-size: 20px;
     margin-bottom: 10px;
 }
-.curriculum .fila .item .casa{
+
+.curriculum .fila .item .casa {
     color: #658af0;
     font-size: 22px;
     font-weight: bold;
     display: block;
 }
-.curriculum .fila .item .fecha{
+
+.curriculum .fila .item .fecha {
     display: block;
     color: #658af0;
     margin-bottom: 10px;
 }
-.curriculum .fila .item p{
+
+.curriculum .fila .item p {
     line-height: 24px;
 }
-.curriculum .fila .izq{
-    border-right: 2px solid #658af0;
-    margin-right: 20px;
-}
-.curriculum .fila .der{
-    border-left: 2px solid #658af0;
-    margin-left: 20px;
-}
-.curriculum .fila .item .conectori{
+
+.curriculum .fila .item .conectori {
     height: 2px;
     background-color: #658af0;
     width: 47px;
@@ -448,7 +443,8 @@ html{
     right: -47px;
     z-index: 5;
 }
-.curriculum .fila .item .conectori .circuloi{
+
+.curriculum .fila .item .conectori .circuloi {
     display: block;
     height: 10px;
     width: 10px;
@@ -458,7 +454,8 @@ html{
     position: relative;
     bottom: 4px;
 }
-.curriculum .fila .item .conectord{
+
+.curriculum .fila .item .conectord {
     height: 2px;
     background-color: #658af0;
     width: 47px;
@@ -467,7 +464,8 @@ html{
     left: -47px;
     z-index: 5;
 }
-.curriculum .fila .item .conectord .circulod{
+
+.curriculum .fila .item .conectord .circulod {
     display: block;
     height: 10px;
     width: 10px;
@@ -477,7 +475,9 @@ html{
     position: relative;
     bottom: 4px;
 }
-/* SECCION PORTFOLIO */
+
+
+/* SECCION PROYECTOS */
 .portfolio{
     background-color: #252A2E;
     color: #fff;
@@ -649,8 +649,8 @@ footer .arriba{
     nav.responsive{
         display: block;
         position: absolute;
-        right: 0;
-        top: 75px;
+        right: 10;
+        top: 50px;
         background-color: #252A2E;
         width: 180px;
     }
