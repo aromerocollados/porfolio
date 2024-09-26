@@ -344,12 +344,12 @@ h2 {
     align-items: center;
     justify-content: flex-end; 
     position: relative;
-    width: 0; /* Empieza en 0 */
-    --width: 0; /* Variable para el ancho */
+    width: 0; 
+    --width: 0; 
 }
 
 .skills .skill .progreso.animated {
-    animation: crecer 1s forwards; /* Duración y dirección de la animación */
+    animation: crecer 1s forwards; 
 }
 
 .skills .skill .barra-skill span {
@@ -723,3 +723,39 @@ footer .arriba{
         width: 100%;
     }
 }
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+button:hover, a:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+nav.responsive {
+    transition: max-height 0.5s ease-in-out;
+    overflow: hidden;
+    max-height: 0;
+}
+
+nav.responsive ul {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+nav.responsive.active {
+    max-height: 500px;
+}
+
+nav.responsive.active ul {
+    opacity: 1;
+}
+
