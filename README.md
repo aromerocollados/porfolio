@@ -1,4 +1,4 @@
 # Mi Porfolio
-![Captura de pantalla 2024-09-24 190413](https://github.com/user-attachments/assets/dad5902b-9fe6-4672-adcc-563e63211c4b)
+![Captura de pantalla 2024-09-30 225150](https://github.com/user-attachments/assets/b73448cd-85e0-4768-b2f1-a101828362bf)
 
 Enlace: https://porfolio-alejandromero.netlify.app/
